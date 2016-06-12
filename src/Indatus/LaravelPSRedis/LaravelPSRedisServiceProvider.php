@@ -21,7 +21,7 @@ class LaravelPSRedisServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		if ( $this->shouldProvidePSRedis() ) {
-			$this->app['redis'] = $this->app->share(function ($app) {
+			$this->app->singleton('redis',function ($app) {
 				$driver = new Driver();
 				return new Database($driver->getConfig());
 			});
