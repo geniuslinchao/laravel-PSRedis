@@ -1,4 +1,5 @@
 # Laravel-PSRedis
+Notice: Cause the original author didn't update this project for a long long time, so i forked and updated it, to fit (and only fit) laravel-5. 
 
 A simple sentinel/redis driver wrapper for laravel. 
 
@@ -14,7 +15,6 @@ We do this by asking your [Redis Sentinels](http://redis.io/topics/sentinel) the
 
 * [Installation](#installation)
   * [Laravel 5 Installation](#installation-for-Laravel-5)
-  * [Laravel 4 Installation](#installation-for-Laravel-4)
 * [Configuration](#configuration)
   * [Service Provider](#the-service-provider)
 * [Contributing](#contributing);
@@ -31,30 +31,15 @@ You can install Laravel-PSRedis easily with composer.
 
 ```
 	"require": {  
-        "indatus/laravel-ps-redis": "dev-master",
+        "geniuslinchao/laravel-PSRedis": ">=1.2.4",
     },
-```
-
-<a name="installation-for-Laravel-4" />
-### Installation for Laravel 4
-
-If you're using Laravel 4 then the installation is slightly different. Laravel-PSRedis depends on `sparkcentral/psredis` which requires `'predis/predis': '>=1.0'` in it's stable release. I've taken the liberty of forking `sparkcentral/psredis` and rolling back `predis/predis` to `0.8.7`
-which is required by laravel 4. To utilize this fork simply require both `indatus\larave-ps-redis` and `sparkcentral/psredis` in your composer.json. And add a repository to point to the fork. Like so:
-
-```
-	"repositories": [  
+    "repositories": [
         {
-            "type": "vcs",
-            "url": "https://github.com/Olofguard/PSRedis"
+                "type": "vcs",
+                "url": "https://github.com/geniuslinchao/laravel-PSRedis"
         }
-    ],
-	"require": {  
-        "indatus/laravel-ps-redis": "dev-master",
-        "sparkcentral/psredis": "dev-master"        
-    },
+     ],
 ```
-
-This will help composer form an installable set of packages, otherwise composer complains about laravel needing `predis/predis` at version `0.8.7` while `sparkcentral/psredis` is installing `1.0.*`.
 
 <a name="configuration" />
 ## Configuration 
@@ -131,7 +116,7 @@ redis service provider.
 	'providers' => [
 		...
 		// 'Illuminate\Redis\RedisServiceProvider', # comment this out
-		'Indatus\LaravelPSRedis\LaravelPSRedisServiceProvider' # add this
+		Indatus\LaravelPSRedis\LaravelPSRedisServiceProvider::class,
 	],
 ```
 
