@@ -10,7 +10,7 @@
     "require": {
         "php": ">=5.5",
         "illuminate/support": ">=5.0",
-        "geniuslinchao/psredis": "1.2"
+        "geniuslinchao/psredis": ">=1.2.1"
     },
     "repositories": [
         {       
