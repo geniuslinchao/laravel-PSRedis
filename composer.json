@@ -10,8 +10,14 @@
     "require": {
         "php": ">=5.5",
         "illuminate/support": ">=5.0",
-        "jamescauwelier/psredis": "~1.1"
+        "geniuslinchao/psredis": "1.2"
     },
+    "repositories": [
+        {       
+                "type": "vcs",
+                "url": "https://github.com/geniuslinchao/PSRedis"
+        }
+     ],
     "require-dev": {
         "laravel/framework": ">=5.0",
         "phpunit/phpunit": ">=4.0",
