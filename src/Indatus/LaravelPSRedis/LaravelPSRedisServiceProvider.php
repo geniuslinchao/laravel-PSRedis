@@ -21,7 +21,7 @@ class LaravelPSRedisServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		if ( $this->shouldProvidePSRedis() ) {
-			$this->app->bindShared('redis', function () {
+			$this->app['redis'] = $this->app->share(function ($app) {
 				$driver = new Driver();
 				return new Database($driver->getConfig());
 			});
@@ -37,7 +37,7 @@ class LaravelPSRedisServiceProvider extends ServiceProvider {
 	{
 		$configs = [
 			$this->app['config']['queue.default'],
-			$this->app['config']['cache.driver'],
+			$this->app['config']['cache.default'],
 			$this->app['config']['session.driver']
 		];
 
