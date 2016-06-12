@@ -3,17 +3,17 @@
     "description": "A simple sentinel/redis driver wrapper for laravel.",
     "authors": [
         {
-            "name": "Damien Russell",
-            "email": "drussell@indatus.com"
+            "name": "Damien Russell/geniuslinchao",
+            "email": "drussell@indatus.com/geniuslinchao@gmail.com"
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": ">=4.2.18",
-        "sparkcentral/psredis": "dev-master"
+        "php": ">=5.5",
+        "illuminate/support": ">=5.0",
+        "sparkcentral/psredis": "*"
     },
     "require-dev": {
-        "laravel/framework": ">=4.2.18",
+        "laravel/framework": ">=5.0",
         "phpunit/phpunit": ">=4.0",
         "mockery/mockery": ">=0.9"
     },
