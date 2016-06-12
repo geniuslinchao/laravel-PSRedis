@@ -38,6 +38,10 @@ You can install Laravel-PSRedis easily with composer.
         {
                 "type": "vcs",
                 "url": "https://github.com/geniuslinchao/laravel-PSRedis"
+        },
+        {
+                "type": "vcs",
+                "url": "https://github.com/geniuslinchao/PSRedis"
         }
      ],
 ```
