@@ -31,7 +31,8 @@ You can install Laravel-PSRedis easily with composer.
 
 ```
 	"require": {  
-        "geniuslinchao/laravel-PSRedis": ">=1.2.8",
+        "geniuslinchao/laravel-PSRedis": ">=1.2.10",
+        "geniuslinchao/psredis": ">=1.2.1"
     },
     "repositories": [
         {
